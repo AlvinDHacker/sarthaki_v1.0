@@ -1,5 +1,6 @@
 import React from "react";
 import VerticalNav from "./VerticalNav";
+import Image from "next/image";
 
 const Homepg = () => {
   const usage = [
@@ -88,9 +89,11 @@ const Homepg = () => {
                 href={values.link}
                 class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
               >
-                <img
+                <Image
                   class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                   src={values.img}
+                  height={10}
+                  width={10}
                   alt=""
                 />
                 <div class="flex flex-col justify-between p-2 leading-normal">

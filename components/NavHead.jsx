@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const NavHead = () => {
@@ -6,7 +7,13 @@ const NavHead = () => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a href="#" className="flex items-center">
-            <img src="" className="h-8 mr-3" alt="Sarthaki Logo" />
+            <Image
+              src=""
+              className="h-8 mr-3"
+              alt="Sarthaki Logo"
+              width={10}
+              height={10}
+            />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Sarthaki
             </span>
