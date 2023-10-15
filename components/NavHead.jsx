@@ -69,7 +69,7 @@ const NavHead = (props) => {
               <div className="md:hidden">
                 <button type="button" onClick={handleNav}>
                   <span className="sr-only">Open main menu</span>
-                  <MenuIcon />
+                  <MenuIcon className="text-black rounded-md" />
                 </button>
               </div>
             </div>
@@ -90,12 +90,16 @@ const NavHead = (props) => {
                   width={30}
                   height={30}
                 />
-                <span className="self-center dark:text-white text-2xl font-semibold whitespace-nowrap">
+                <span className="self-center text-black text-2xl font-semibold whitespace-nowrap">
                   Sarthaki
                 </span>
               </div>
 
-              <VerticalNav />
+              <VerticalNav
+                changeStat={props.changeStat}
+                handleNav={handleNav}
+                nav={nav}
+              />
             </div>
           </div>
         ) : (

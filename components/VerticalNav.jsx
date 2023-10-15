@@ -37,7 +37,10 @@ const VerticalNav = (props) => {
         <>
           <li>
             <a
-              onClick={() => props.changeStat(2)}
+              onClick={() => {
+                props.changeStat(2);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Calculator />
@@ -46,7 +49,10 @@ const VerticalNav = (props) => {
           </li>
           <li>
             <a
-              onClick={() => props.changeStat(3)}
+              onClick={() => {
+                props.changeStat(3);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Landmark />
@@ -55,7 +61,10 @@ const VerticalNav = (props) => {
           </li>
           <li>
             <a
-              onClick={() => props.changeStat(4)}
+              onClick={() => {
+                props.changeStat(4);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <CandlestickChart />
@@ -81,7 +90,10 @@ const VerticalNav = (props) => {
         <>
           <li>
             <a
-              onClick={() => props.changeStat(5)}
+              onClick={() => {
+                props.changeStat(5);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Calculator />
@@ -90,7 +102,10 @@ const VerticalNav = (props) => {
           </li>
           <li>
             <a
-              onClick={() => props.changeStat(6)}
+              onClick={() => {
+                props.changeStat(6);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Banknote />
@@ -99,7 +114,10 @@ const VerticalNav = (props) => {
           </li>
           <li>
             <a
-              onClick={() => props.changeStat(7)}
+              onClick={() => {
+                props.changeStat(7);
+                props.nav ? props.handleNav() : "";
+              }}
               className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <BookMarked />
