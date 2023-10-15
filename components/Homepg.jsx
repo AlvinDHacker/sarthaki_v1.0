@@ -122,7 +122,7 @@ const Homepg = () => {
               type="button"
               onClick={() => toggle(2)}
             >
-              Awareness Videos
+              Videos
             </button>
           </li>
           <li className="mr-2" role="presentation">

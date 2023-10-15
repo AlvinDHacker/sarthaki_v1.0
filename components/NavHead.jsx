@@ -2,6 +2,7 @@
 import { BookMarked, Calculator, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+import VerticalNav from "./VerticalNav";
 
 const NavHead = (props) => {
   const [nav, setNav] = useState(false);
@@ -22,7 +23,7 @@ const NavHead = (props) => {
               width={30}
               height={30}
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">
+            <span className="self-center text-black text-2xl font-semibold whitespace-nowrap">
               Sarthaki
             </span>
           </a>
@@ -35,7 +36,7 @@ const NavHead = (props) => {
             </a>
             <a
               href="#"
-              className="text-sm px-3 py-2 font-semibold rounded-md bg-blue-600 dark:bg-blue-500 hover:underline"
+              className="text-sm px-3 py-2 font-semibold rounded-md text-white bg-blue-600 dark:bg-blue-500 hover:underline"
             >
               Login
             </a>
@@ -81,37 +82,20 @@ const NavHead = (props) => {
             style={{ zIndex: "5" }}
           >
             <div className="py-4 overflow-y-auto">
-              <Image
-                src=""
-                className="h-8 mr-3"
-                alt="Sarthaki Logo"
-                width={10}
-                height={10}
-              />
-              <ul className="space-y-2 font-medium">
-                <li>
-                  <a
-                    href="#home"
-                    className="flex items-center p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
-                    onClick={handleNav}
-                  >
-                    <Calculator />
-                    <span className="ml-3">Accounting</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#resources"
-                    className="flex items-center p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
-                    onClick={handleNav}
-                  >
-                    <BookMarked />
-                    <span className="flex-1 ml-3 whitespace-nowrap">
-                      Complaince
-                    </span>
-                  </a>
-                </li>
-              </ul>
+              <div className="flex items-center">
+                <Image
+                  src="/img/download.png"
+                  className="mr-3"
+                  alt="Sarthaki Logo"
+                  width={30}
+                  height={30}
+                />
+                <span className="self-center dark:text-white text-2xl font-semibold whitespace-nowrap">
+                  Sarthaki
+                </span>
+              </div>
+
+              <VerticalNav />
             </div>
           </div>
         ) : (
