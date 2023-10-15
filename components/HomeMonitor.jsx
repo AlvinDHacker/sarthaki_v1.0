@@ -1,0 +1,37 @@
+"use client";
+import React, { useState } from "react";
+import Homepg from "./Homepg";
+import VerticalNav from "./VerticalNav";
+import UpdateInfo from "./UpdateInfo";
+import NavHead from "./NavHead";
+
+const HomeMonitor = () => {
+  const [homeStat, setHomeStat] = useState(1);
+
+  const changeStat = (index) => {
+    setHomeStat(index);
+  };
+
+  return (
+    <div>
+      <NavHead changeStat={changeStat} />
+      <div className="md:mx-6 mx-3 mt-2">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-3">
+          <div className="md:block hidden">
+            <div className="rounded-md border-b-gray-600 p-3 h-[98%] md:m-3 m-1 bg-gray-300">
+              <h1 className="font-bold text-xl">Quick Links</h1>
+              <VerticalNav changeStat={changeStat} />
+            </div>
+          </div>
+          <div className="lg:col-span-2">
+            {homeStat === 1 ? <Homepg /> : ""}
+            {homeStat === 2 || 3 || 4 ? <UpdateInfo homeStat={homeStat} /> : ""}
+            {/* {homeStat === 5 || 6 || 7 ? <UpdateInfo homeStat={homeStat} /> : ""} */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomeMonitor;

@@ -1,11 +1,11 @@
-import Homepg from '@/components/Homepg'
-import NavHead from '@/components/NavHead'
+import Footer from '@/components/Footer'
+import HomeMonitor from '@/components/HomeMonitor'
 
 export default function Home() {
   return (
     <>
-      <NavHead />
-      <Homepg />
+      <HomeMonitor />
+      <Footer />
     </>
   )
 }
