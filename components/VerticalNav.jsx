@@ -26,7 +26,7 @@ const VerticalNav = (props) => {
       <li>
         <a
           onClick={AccChange}
-          className="flex items-center p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          className="flex items-center p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
         >
           {acc ? <ChevronDown /> : <ChevronRight />}
           <span className="ml-3">Accounting</span>
@@ -41,7 +41,7 @@ const VerticalNav = (props) => {
                 props.changeStat(2);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Calculator />
               <span className="ml-3">Foundational Accounting</span>
@@ -53,7 +53,7 @@ const VerticalNav = (props) => {
                 props.changeStat(3);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Landmark />
               <span className="ml-3">Accounting Concepts</span>
@@ -65,7 +65,7 @@ const VerticalNav = (props) => {
                 props.changeStat(4);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <CandlestickChart />
               <span className="ml-3">Accounting Conventions</span>
@@ -79,7 +79,7 @@ const VerticalNav = (props) => {
       <li>
         <a
           onClick={CompChange}
-          className="flex items-center p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          className="flex items-center p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
         >
           {comp ? <ChevronDown /> : <ChevronRight />}
           <span className="flex-1 ml-3 whitespace-nowrap">Complaince</span>
@@ -94,7 +94,7 @@ const VerticalNav = (props) => {
                 props.changeStat(5);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Calculator />
               <span className="ml-3">NPO</span>
@@ -106,7 +106,7 @@ const VerticalNav = (props) => {
                 props.changeStat(6);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <Banknote />
               <span className="ml-3">Tax</span>
@@ -118,7 +118,7 @@ const VerticalNav = (props) => {
                 props.changeStat(7);
                 props.nav ? props.handleNav() : "";
               }}
-              className="flex items-center ml-10 p-2 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+              className="flex items-center ml-10 p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
             >
               <BookMarked />
               <span className="ml-3">Laws</span>

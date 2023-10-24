@@ -59,7 +59,7 @@ const NavHead = (props) => {
                 </div>
                 <div>
                   <a
-                    href="#"
+                    href="/sarthaki"
                     className="text-gray-900 dark:text-white hover:underline"
                   >
                     Sarthaki

@@ -1,17 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import Homepg from "./Homepg";
-import VerticalNav from "./VerticalNav";
-import UpdateInfo from "./UpdateInfo";
 import NavHead from "./NavHead";
+import VerticalNav from "./VerticalNav";
+import Sarthakipg from "./Sarthakipg";
+import UpdateInfo from "./UpdateInfo";
+import SarthakiDash from "./SarthakiDash";
 
-const HomeMonitor = () => {
+const Sarthaki = () => {
   const [homeStat, setHomeStat] = useState(1);
 
   const changeStat = (index) => {
     setHomeStat(index);
   };
-
   return (
     <div>
       <NavHead changeStat={changeStat} />
@@ -24,7 +24,7 @@ const HomeMonitor = () => {
             </div>
           </div>
           <div className="lg:col-span-3">
-            {homeStat === 1 ? <Homepg /> : ""}
+            {homeStat === 1 ? <Sarthakipg /> : ""}
             {homeStat === 2 || 3 || 4 || 5 || 6 || 7 ? (
               <UpdateInfo homeStat={homeStat} />
             ) : (
@@ -37,4 +37,4 @@ const HomeMonitor = () => {
   );
 };
 
-export default HomeMonitor;
+export default Sarthaki;

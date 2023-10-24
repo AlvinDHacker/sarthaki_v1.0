@@ -52,16 +52,24 @@ const Homepg = () => {
 
   const data = [
     {
-      date: "12-10-2023",
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing error excepturi dolore expedita veritatis nihil quos inventore, soluta quo ullam! Praesentium, eveniet alias atque et quam veritatis aliquid!",
+      info: "The due date for filing Return of Income in ITR-7 for A.Y…",
+      date: "24/10/23",
+      link: "https://www.incometax.gov.in/iec/foportal/sites/default/files/2023-09/circular_no_16_2023.pdf#",
     },
     {
-      date: "12-10-2023",
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing error excepturi dolore expedita veritatis nihil quo, eveniet alias atque et quam veritatis aliquid!",
+      info: "Form 3CA-3CD E-mail campaign",
+      date: "24/10/23",
+      link: "https://www.incometax.gov.in/iec/foportal/e-Campaigns/e-mail/detail/10204",
     },
     {
-      date: "12-10-2023",
-      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sapiente debitis error excepturi dolore expedita veritatis nihil quos inventore, soluta quo ullam! Praesentium, eveniet alias atque et quam veritatis aliquid!",
+      info: "The due date for filing Audit Reports in Form…",
+      date: "24/10/23",
+      link: "https://www.incometax.gov.in/iec/foportal/sites/default/files/2023-09/circular_no_16_2023.pdf#",
+    },
+    {
+      info: "AY2023-24 High Risk Campaign",
+      date: "24/10/23",
+      link: "https://www.incometax.gov.in/iec/foportal/e-Campaigns/e-mail/detail/10205",
     },
   ];
 
@@ -72,19 +80,42 @@ const Homepg = () => {
   };
   return (
     <div className="lg:col-span-2">
-      <h1 className="font-bold text-xl m-2">Latest Updates</h1>
+      <div className="flex justify-between">
+        <h1 className="font-bold text-xl m-2">Latest Updates</h1>
+        <a
+          href="#"
+          class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        >
+          View More
+          <svg
+            class="w-4 h-4 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
       <div className="grid md:grid-cols-2 gap-3">
         {data.map((values, index) => (
           <div key={index} className="rounded-md">
             <a
-              href="#"
+              href={values.link}
               className="block p-4 h-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
             >
               <h5 className="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white">
-                {values.date}
+                {values.info}
               </h5>
               <p className="font-normal text-gray-700 text-sm dark:text-gray-400">
-                {values.info}
+                Date : {values.date}
               </p>
             </a>
           </div>
