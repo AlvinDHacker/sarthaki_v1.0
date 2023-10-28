@@ -50,6 +50,7 @@ const NavHead = (props) => {
               <div className="flex flex-row space-x-8">
                 <div>
                   <a
+                    href="/"
                     onClick={() => props.changeStat(1)}
                     className="text-gray-900 dark:text-white hover:underline"
                     aria-current="page"
