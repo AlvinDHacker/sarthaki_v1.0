@@ -1,14 +1,38 @@
 "use client";
-import { BookMarked, Calculator, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
 import VerticalNav from "./VerticalNav";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { auth } from "@/lib/firebase";
 
 const NavHead = (props) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const [userAuth, setUserAuth] = useState(null);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserAuth(user);
+      } else {
+        setUserAuth(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
+
+  const userSignout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("Signout Success");
+      })
+      .catch((e) => console.log(e));
   };
 
   return (
@@ -34,12 +58,23 @@ const NavHead = (props) => {
             >
               Call Us
             </a>
-            <a
-              href="#"
-              className="text-sm px-3 py-2 font-semibold rounded-md text-white bg-blue-600 dark:bg-blue-500 hover:underline"
-            >
-              Login
-            </a>
+            {userAuth ? (
+              <>
+                <button
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto md:px-5 px-2 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  onClick={userSignout}
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <a
+                href="/login"
+                className="text-sm px-3 py-2 font-semibold rounded-md text-white bg-blue-600 dark:bg-blue-500 hover:underline"
+              >
+                Login
+              </a>
+            )}
           </div>
         </div>
       </nav>
