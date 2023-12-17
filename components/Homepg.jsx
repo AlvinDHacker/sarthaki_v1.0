@@ -84,11 +84,11 @@ const Homepg = () => {
         <h1 className="font-bold text-xl m-2">Latest Updates</h1>
         <a
           href="#"
-          class="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          className="inline-flex items-center font-medium text-blue-600 dark:text-blue-500 hover:underline"
         >
           View More
           <svg
-            class="w-4 h-4 ml-2"
+            className="w-4 h-4 ml-2"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -201,7 +201,7 @@ const Homepg = () => {
       </div>
 
       <div className={toggletab === 2 ? "block" : "hidden"}>
-        <div className="grid md:grid-cols-5 grid-cols-2 gap-2 mt-3">
+        <div className="flex flex-row gap-2 mt-3">
           {vids.map((values, index) => (
             <a
               key={index}

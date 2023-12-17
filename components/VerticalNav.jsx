@@ -22,7 +22,7 @@ const VerticalNav = (props) => {
   };
 
   return (
-    <ul className="my-4 space-y-3">
+    <ul className="my-4 space-y-1">
       <li>
         <a
           onClick={AccChange}

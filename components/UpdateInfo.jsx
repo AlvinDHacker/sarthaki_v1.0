@@ -2,7 +2,7 @@ import React from "react";
 
 const UpdateInfo = (props) => {
   return (
-    <div>
+    <div className="select-none">
       <div className={props.homeStat === 2 ? "block" : "hidden"}>
         <div className="lg:col-span-2 mt-5 m-2">
           <h1 className="font-bold text-xl ">Accounting</h1>
