@@ -149,6 +149,7 @@ const SarthakiDash = () => {
               width={400}
               height={100}
               className="rounded-md"
+              alt=""
             />
           </div>
           <div>
@@ -157,6 +158,7 @@ const SarthakiDash = () => {
               width={400}
               height={100}
               className="rounded-md"
+              alt=""
             />
           </div>
           <div>
@@ -165,6 +167,7 @@ const SarthakiDash = () => {
               width={400}
               height={100}
               className="rounded-md"
+              alt=""
             />
           </div>
           <div>
@@ -173,6 +176,7 @@ const SarthakiDash = () => {
               width={400}
               height={100}
               className="rounded-md"
+              alt=""
             />
           </div>
         </div>

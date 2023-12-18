@@ -1,14 +1,14 @@
 "use client";
 import NavHead from "./NavHead";
 import VerticalNav from "./VerticalNav";
-import Sarthakipg from "./Sarthakipg";
 import UpdateInfo from "./UpdateInfo";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "@/lib/firebase";
 import Authenticate from "./Authenticate";
+import Adpg from "./Adpg";
 
-const Sarthaki = () => {
+const AdMonitor = () => {
   const [homeStat, setHomeStat] = useState(1);
 
   const changeStat = (index) => {
@@ -40,7 +40,7 @@ const Sarthaki = () => {
                 </div>
               </div>
               <div className="lg:col-span-3">
-                {homeStat === 1 ? <Sarthakipg /> : ""}
+                {homeStat === 1 ? <Adpg /> : ""}
                 {homeStat === 2 || 3 || 4 || 5 || 6 || 7 ? (
                   <UpdateInfo homeStat={homeStat} />
                 ) : (
@@ -57,4 +57,4 @@ const Sarthaki = () => {
   );
 };
 
-export default Sarthaki;
+export default AdMonitor;

@@ -2,6 +2,13 @@ import React from "react";
 
 const UpdateInfo = (props) => {
   return (
+    <>
+    {/* {
+      document.addEventListener('keyup', (e) => {
+        navigator.clipboard.writeText('');
+        alert('Screenshot Disabled')
+      })
+    } */}
     <div className="select-none">
       <div className={props.homeStat === 2 ? "block" : "hidden"}>
         <div className="lg:col-span-2 mt-5 m-2">
@@ -303,6 +310,7 @@ const UpdateInfo = (props) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

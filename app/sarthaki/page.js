@@ -1,12 +1,12 @@
 import Footer from '@/components/Footer'
 import HomeMonitor from '@/components/HomeMonitor'
-import Sarthaki from '@/components/Sarthaki'
+import SarthakiMonitor from '@/components/SarthakiMonitor'
 
 export default function Home() {
   return (
     <div>
       {/* <HomeMonitor /> */}
-      <Sarthaki />
+      <SarthakiMonitor />
       <Footer />
     </div>
   )

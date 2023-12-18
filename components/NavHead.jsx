@@ -8,6 +8,7 @@ import { auth } from "@/lib/firebase";
 
 const NavHead = (props) => {
   const [nav, setNav] = useState(false);
+  const [newUser, setNewUser] = useState('');
 
   const handleNav = () => {
     setNav(!nav);
@@ -18,6 +19,7 @@ const NavHead = (props) => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
+        setNewUser(user.email)
       } else {
         setUserAuth(null);
       }
@@ -70,7 +72,7 @@ const NavHead = (props) => {
             ) : (
               <a
                 href="/login"
-                className="text-sm px-3 py-2 font-semibold rounded-md text-white bg-blue-600 dark:bg-blue-500 hover:underline"
+                className="text-sm px-3 py-2 font-semibold rounded-md text-white bg-blue-600 dark:bg-gray-900 hover:underline"
               >
                 Login
               </a>
@@ -101,6 +103,17 @@ const NavHead = (props) => {
                     Sarthaki
                   </a>
                 </div>
+                {
+                  userAuth && (newUser == 'admin@sarthaki.com') ?
+                  <div>
+                  <a
+                    href="/admin"
+                    className="text-gray-900 dark:text-white hover:underline"
+                  >
+                    Admin Ctrl
+                  </a>
+                </div> : ''
+                }
               </div>
               <div className="md:hidden">
                 <button type="button" onClick={handleNav}>
