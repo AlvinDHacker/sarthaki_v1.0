@@ -1,6 +1,8 @@
 "use client";
+import { auth } from "@/lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SarthakiDash = () => {
   const [togglemain, setTogglemain] = useState(1);
@@ -20,6 +22,20 @@ const SarthakiDash = () => {
   const togglewbox = (index) => {
     setWbox(index);
   };
+
+  const [userAuth, setUserAuth] = useState(null);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserAuth(user);
+      } else {
+        setUserAuth(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
 
   return (
     <div>
@@ -310,11 +326,27 @@ const SarthakiDash = () => {
                 Status
               </button>
             </li>
+            {
+              (userAuth?.email == 'admin@sarthaki.com') ? <li className="mr-2" role="presentation">
+              <button
+                className={
+                  wbox === 3
+                    ? "inline-block p-4 border-b-2 rounded-t-lg border-blue-300"
+                    : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                }
+                type="button"
+                onClick={() => togglewbox(4)}
+              >
+                Add Tasks
+              </button>
+            </li> : ''
+            }
+            
           </ul>
         </div>
       </div>
 
-      {/* Create Wbox 1, 2 & 3 */}
+      {/* Create Wbox 1, 2, 3 & 4 */}
       <div className={wbox === 1 ? "block" : "hidden"}>
         <h1 className="font-bold text-xl py-1">
           You have the following tasks Pending
@@ -535,6 +567,61 @@ const SarthakiDash = () => {
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div className={wbox === 4 ? "block" : "hidden"}>
+        <h1 className="font-bold text-xl py-1">
+          Add Tasks for Sarthaki and the Client to Do
+        </h1>
+        <form>
+          <label
+            for="type"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Task for :
+          </label>
+          <select
+            id="type"
+            className="bg-gray-50 mb-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>Sarthaki</option>
+            <option>Client</option>
+          </select>
+
+          <label
+            for="task-name"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Task Name
+          </label>
+          <input
+            id="task-name"
+            className="bg-gray-50 mb-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+
+          <label
+            for="month"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Month
+          </label>
+          <select
+            id="month"
+            className="bg-gray-50 border mb-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>Jan 2023</option>
+            <option>Feb 2023</option>
+            <option>March 2023</option>
+            <option>April 2023</option>
+          </select>
+
+          <button
+            type="button"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Submit Request
+          </button>
+        </form>
       </div>
 
       <div className={togglemain === 3 ? "block" : "hidden"}>

@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import React, { useEffect, useState } from "react";
 import { auth } from "../lib/firebase";
 
-const Ad_AddUser = () => {
+const Ad_AddEmpl = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -44,12 +44,11 @@ const Ad_AddUser = () => {
       e.target.reset();
       console.log('abd', userAuth)
   };
-  
   return (
     <div className="md:w-[60%] w-[90%] mx-auto py-5">
         {userAuth?.email}
       <h1 className="font-bold text-xl mb-5 ">
-        Create Account for User
+        Create Account for Employee
       </h1>
       <form onSubmit={signUp}>
           <div className="mb-4">
@@ -57,7 +56,7 @@ const Ad_AddUser = () => {
               for="email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-            New User Email
+            New Employee Email
             </label>
             <input
               type="email"
@@ -74,7 +73,7 @@ const Ad_AddUser = () => {
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              New User password
+              New Employee password
             </label>
             <input
               type="password"
@@ -129,4 +128,4 @@ const Ad_AddUser = () => {
   );
 };
 
-export default Ad_AddUser;
+export default Ad_AddEmpl;

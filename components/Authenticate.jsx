@@ -10,11 +10,13 @@ const Authenticate = () => {
   const [password, setPassword] = useState("");
 
   const [userAuth, setUserAuth] = useState(null);
+  const [userName , setUserName] = useState('');
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
+        setUserName(user.email);
       } else {
         setUserAuth(null);
       }
@@ -41,6 +43,7 @@ const Authenticate = () => {
       <NavHead />
       <div className="md:w-[60%] w-[90%] mx-auto py-5">
         <h1 className="font-bold text-xl mb-5 ">Log-In to Sarthaki</h1>
+        {userName}
         <form onSubmit={LogIn}>
           <div className="mb-4">
             <label
