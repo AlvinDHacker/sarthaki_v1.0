@@ -8,7 +8,12 @@ const Adpg = () => {
           <div>
             <a href='/admin/add_user'>Add Users</a>
           </div>
+          <div>
             <a href='/admin/add_employee'>Add Employee</a>
+          </div>
+          <div>
+            <a href='/admin/add_company'>Add Company</a>
+          </div>
         </div>
     </div>
   )

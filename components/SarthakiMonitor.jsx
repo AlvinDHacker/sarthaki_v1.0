@@ -32,6 +32,8 @@ const SarthakiMonitor = () => {
 
   return (
     <div>
+      {
+        userAuth ?
         <>
           <NavHead changeStat={changeStat} />
           <div className="md:mx-6 mx-3 mt-2">
@@ -52,7 +54,8 @@ const SarthakiMonitor = () => {
               </div>
             </div>
           </div>
-        </>
+        </> : ""
+      }
     </div>
   );
 };

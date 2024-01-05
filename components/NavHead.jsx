@@ -3,7 +3,7 @@ import { MenuIcon, CrossIcon } from "lucide-react";
 import Image from "next/image";
 import VerticalNav from "./VerticalNav";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { auth } from "@/lib/firebase";
 
 const NavHead = (props) => {
@@ -15,7 +15,7 @@ const NavHead = (props) => {
   };
 
   const [userAuth, setUserAuth] = useState(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
