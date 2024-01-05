@@ -3,9 +3,9 @@ import NavHead from "./NavHead";
 import VerticalNav from "./VerticalNav";
 import UpdateInfo from "./UpdateInfo";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { auth } from "@/lib/firebase";
-import Authenticate from "./Authenticate";
+import { useRouter } from "next/navigation";
 import Adpg from "./Adpg";
 
 const AdMonitor = () => {
@@ -15,20 +15,22 @@ const AdMonitor = () => {
     setHomeStat(index);
   };
 
+  const router = useRouter();
+
   const [userAuth, setUserAuth] = useState(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
       } else {
         setUserAuth(null);
+        router.push('/login')
       }
     });
   }, []);
 
   return (
     <div>
-      {userAuth ? (
         <>
           <NavHead changeStat={changeStat} />
           <div className="md:mx-6 mx-3 mt-2">
@@ -50,9 +52,6 @@ const AdMonitor = () => {
             </div>
           </div>
         </>
-      ) : (
-        <Authenticate />
-      )}
     </div>
   );
 };

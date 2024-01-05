@@ -2,6 +2,8 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../lib/firebase";
+import { setDoc, doc } from "firebase/firestore";
+import { db } from "../lib/firebase";
 
 const Ad_AddEmpl = () => {
     const [email, setEmail] = useState("");
@@ -12,10 +14,32 @@ const Ad_AddEmpl = () => {
     const [userAuth, setUserAuth] = useState(null);
     const [newUser, setNewUser] = useState(null);
 
+    // const AddEmplPath = doc(Firestore, 'users');
+
+    // async function addNewDoc() {
+    //   const newDoc = await addDoc(AddEmplPath, {
+    //     email: newUser,
+    //     role: 'Employee',
+    //   });
+    //   console.log(`Document Created at ${newDoc.path}`);
+    // } 
+
+    async function fetchData(user) {
+      if (user) {
+        const userRef = doc(db, 'users', user.uid)
+        setDoc(
+          userRef,
+          { Name: user.displayName, email: user.email, role: 'Employee' },
+          { merge: true }
+        )
+      }
+    }
+
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
             setUserAuth(user);
+            fetchData(user)
           } else {
             setUserAuth(null);
           }

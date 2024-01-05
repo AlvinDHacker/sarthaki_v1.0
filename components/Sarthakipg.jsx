@@ -7,18 +7,24 @@ const Sarthakipg = () => {
 
   const changeComp1 = () => {
     setComp1(!comp1);
+    setComp2(false);
+    setComp3(false);
   };
 
   const [comp2, setComp2] = useState(false);
 
   const changeComp2 = () => {
     setComp2(!comp2);
+    setComp1(false);
+    setComp3(false);
   };
 
   const [comp3, setComp3] = useState(false);
 
   const changeComp3 = () => {
     setComp3(!comp3);
+    setComp2(false);
+    setComp1(false);
   };
 
   return (

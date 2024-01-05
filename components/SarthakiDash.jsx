@@ -2,7 +2,7 @@
 import { auth } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
 const SarthakiDash = () => {
   const [togglemain, setTogglemain] = useState(1);
@@ -24,7 +24,7 @@ const SarthakiDash = () => {
   };
 
   const [userAuth, setUserAuth] = useState(null);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
