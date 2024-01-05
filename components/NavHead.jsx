@@ -1,5 +1,5 @@
 "use client";
-import { MenuIcon, CrossIcon } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import VerticalNav from "./VerticalNav";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -118,7 +118,7 @@ const NavHead = (props) => {
               <div className="md:hidden">
                 <button type="button" onClick={handleNav}>
                   <span className="sr-only">Open main menu</span>
-                  {nav ? <CrossIcon className="text-black rounded-md" /> : <MenuIcon className="text-black rounded-md" />}
+                  {nav ? <X className="text-black rounded-md" /> : <MenuIcon className="text-black rounded-md" />}
                 </button>
               </div>
             </div>
