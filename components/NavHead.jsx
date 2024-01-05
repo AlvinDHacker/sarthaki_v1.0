@@ -90,7 +90,7 @@ const NavHead = (props) => {
                   <a
                     href="/"
                     onClick={() => props.changeStat(1)}
-                    className="text-white dark:text-white font-semibold border-b-2 border-white pb-0.5"
+                    className="text-white dark:text-white font-semibold"
                     aria-current="page"
                   >
                     Home
