@@ -92,7 +92,7 @@ const VerticalNav = (props) => {
             className="flex items-center p-1 text-sm font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
           >
             {comp ? <ChevronDown /> : <ChevronRight />}
-            <span className="flex-1 ml-3 whitespace-nowrap">Complaince</span>
+            <span className="flex-1 ml-3 whitespace-nowrap">Compliance</span>
           </a>
         </li>
 
