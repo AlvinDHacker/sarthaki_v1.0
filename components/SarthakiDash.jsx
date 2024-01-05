@@ -327,10 +327,10 @@ const SarthakiDash = () => {
               </button>
             </li>
             {
-              (userAuth?.email == 'admin@sarthaki.com') ? <li className="mr-2" role="presentation">
+              (userAuth?.role == 'admin' || userAuth?.role == 'Employee') ? <li className="mr-2" role="presentation">
               <button
                 className={
-                  wbox === 3
+                  wbox === 4
                     ? "inline-block p-4 border-b-2 rounded-t-lg border-blue-300"
                     : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 }
