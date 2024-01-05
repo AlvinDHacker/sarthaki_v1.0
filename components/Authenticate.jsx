@@ -87,25 +87,25 @@ const Authenticate = () => {
           </button>
         </form>
         {userAuth ? (
-          redirect("/sarthaki")
-          // <>
-          //   <div
-          //     className="p-2 my-2 flex justify-between mb-4 text-sm text-green-800 rounded-lg bg-green-100 dark:bg-gray-800 dark:text-green-400"
-          //     role="alert"
-          //   >
-          //     <div className="m-2">
-          //       <span className="font-medium">Sign In Success</span> Welcome to
-          //       Sarthaki
-          //     </div>
-          //     <a
-          //       href="/"
-          //       type="submit"
-          //       className="text-white bg-blue-700 md:my-0 my-4 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          //     >
-          //       Go to Home
-          //     </a>
-          //   </div>
-          // </>
+          // redirect("/sarthaki")
+          <>
+            <div
+              className="p-2 my-2 flex justify-between mb-4 text-sm text-green-800 rounded-lg bg-green-100 dark:bg-gray-800 dark:text-green-400"
+              role="alert"
+            >
+              <div className="m-2">
+                <span className="font-medium">Sign In Success</span> Welcome to
+                Sarthaki
+              </div>
+              <a
+                href="/"
+                type="submit"
+                className="text-white bg-blue-700 md:my-0 my-4 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Go to Home
+              </a>
+            </div>
+          </>
         ) : (
           ""
         )}
