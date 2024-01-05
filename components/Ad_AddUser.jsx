@@ -2,6 +2,8 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../lib/firebase";
+import { setDoc, doc, addDoc } from "firebase/firestore";
+import { db } from "../lib/firebase";
 
 const Ad_AddUser = () => {
     const [email, setEmail] = useState("");
@@ -47,6 +49,7 @@ const Ad_AddUser = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setNewUser(email)
+        addDoc()
         signOut(auth);
         signInWithEmailAndPassword(auth, userAuth.email, adminpass)
       })
