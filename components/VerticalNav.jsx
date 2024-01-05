@@ -22,12 +22,16 @@ const VerticalNav = (props) => {
     setComp(!comp);
   };
 
+  const [search, setSearch] = useState("");
+
   return (
     <div className="flex flex-col">
-      <form onSubmit={() => {}} autoComplete='off' className='mt-4 flex mb-2 relative'>
-        <input onChange={() => {}} id='contentSearch' className='w-full selection:bg-blue-500 py-2 pl-3 outline-none border-none text-white caret-white bg-blue-600 placeholder:text-white rounded-[10px]' type='text' placeholder='Search' data-search />
+      {/* <form onSubmit={() => {}} autoComplete='off' className='mt-4 flex mb-2 relative'> */}
+      <div className='mt-4 flex mb-2 relative'>
+        <input onChange={(e) => setSearch(e.target.value)} id='contentSearch' className='w-full selection:bg-blue-500 py-2 pl-3 outline-none border-none text-white caret-white bg-blue-600 placeholder:text-white rounded-[10px]' type='text' placeholder='Search' data-search />
         <button type="submit" className="absolute top-0 right-0"><Search className='text-white w-6 h-6 mt-2 pr-2' /></button>
-      </form>
+      </div>
+      {/* </form> */}
       <ul className="my-4 space-y-1">
         <li>
           <a
