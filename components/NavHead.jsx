@@ -1,5 +1,5 @@
 "use client";
-import { MenuIcon, X } from "lucide-react";
+import { MenuIcon, X, PhoneCall, LogOut } from "lucide-react";
 import Image from "next/image";
 import VerticalNav from "./VerticalNav";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -56,14 +56,15 @@ const NavHead = (props) => {
           <div className="flex items-center">
             <a
               href="tel:9820257477"
-              className="mr-6 text-sm  text-gray-500 dark:text-white hover:underline"
+              className="mr-6 text-sm  text-gray-500 dark:text-white hover:text-gray-900 dark:hover:text-gray-300"
             >
-              Call Us
+              <PhoneCall className="w-6 h-6 text-blue-600 font-extrabold md:hidden" />
+              <span className="hidden md:block">Call Us</span>
             </a>
             {userAuth ? (
               <>
                 <button
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto md:px-5 px-2 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   onClick={userSignout}
                 >
                   Sign Out
@@ -80,7 +81,7 @@ const NavHead = (props) => {
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700">
+      <nav className="bg-blue-600 dark:bg-gray-700">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex ">
             <div className="flex container justify-between font-medium mt-0 mr-6 text-sm">
@@ -89,7 +90,7 @@ const NavHead = (props) => {
                   <a
                     href="/"
                     onClick={() => props.changeStat(1)}
-                    className="text-gray-900 dark:text-white hover:underline"
+                    className="text-white dark:text-white font-semibold border-b-2 border-white pb-0.5"
                     aria-current="page"
                   >
                     Home
@@ -98,7 +99,7 @@ const NavHead = (props) => {
                 <div>
                   <a
                     href="/sarthaki"
-                    className="text-gray-900 dark:text-white hover:underline"
+                    className="text-white dark:text-white"
                   >
                     Sarthaki
                   </a>
@@ -108,7 +109,7 @@ const NavHead = (props) => {
                   <div>
                   <a
                     href="/admin"
-                    className="text-gray-900 dark:text-white hover:underline"
+                    className="text-white dark:text-white"
                   >
                     Admin Ctrl
                   </a>

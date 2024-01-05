@@ -4,21 +4,21 @@ import { PlusIcon } from "lucide-react";
 const Adpg = () => {
   return (
     <div>
-        <h1 className="pt-10 text-2xl">Welcome to Admin Controls</h1>
-        <div className='py-5 gap-4'>
-          <div className='flex gap-2 items-center justify-center bg-blue-500 p-5'>
-            <PlusIcon className='w-6 h-6' />
-            <a href='/admin/add_user'>User</a>
-          </div>
-          <div className='flex gap-2 items-center justify-center bg-blue-500 p-5'>
-            <PlusIcon className='w-6 h-6' />
-            <a href='/admin/add_employee'>Employee</a>
-          </div>
-          <div className='flex gap-2 items-center justify-center bg-blue-500 p-5'>
-            <PlusIcon className='w-6 h-6' />
-            <a href='/admin/add_company'>Company</a>
-          </div>
-        </div>
+      <h1 className="pt-10 text-2xl">Welcome to Admin Controls</h1>
+      <div className='flex flex-wrap justify-center items-center py-5 gap-4'>
+        <a href='/admin/add_user'><div className='w-40 flex gap-2 items-center justify-center bg-blue-600 p-4 text-white'>
+          <PlusIcon className='w-6 h-6 font-extrabold' />
+          User
+        </div></a>
+        <a href='/admin/add_employee'><div className='w-40 flex gap-2 items-center justify-center bg-blue-600 p-4 text-white'>
+          <PlusIcon className='w-6 h-6 font-extrabold' />
+          Employee
+        </div></a>
+        <a href='/admin/add_company'><div className='w-40 flex gap-2 items-center justify-center bg-blue-600 p-4 text-white'>
+          <PlusIcon className='w-6 h-6 font-extrabold' />
+          Company
+        </div></a>
+      </div>
     </div>
   )
 }
