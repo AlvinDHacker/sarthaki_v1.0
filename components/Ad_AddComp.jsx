@@ -73,7 +73,7 @@ const Ad_AddComp = () => {
               for="password"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              New User password
+              Add Access Users
             </label>
             <input
               type="password"

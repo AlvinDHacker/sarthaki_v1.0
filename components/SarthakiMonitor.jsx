@@ -54,7 +54,10 @@ const SarthakiMonitor = () => {
               </div>
             </div>
           </div>
-        </> : ""
+        </> : <>
+        <div className="h-screen">
+          {" "}
+          </div></>
       }
     </div>
   );
