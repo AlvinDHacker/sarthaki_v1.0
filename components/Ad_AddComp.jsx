@@ -6,17 +6,21 @@ import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 const Ad_AddComp = () => {
-  const [company, setCompany] = useState("");
-  const [password, setPassword] = useState("");
+  const [company, setCompany] = useState({name:'', user: []});
 
   const [arr, setArr] = useState([]);
-
   const [userAuth, setUserAuth] = useState(null);
 
-  async function fetchData(company) {
+  async function fetchData() {
     if (company) {
-      const userRef = doc(db, "company", company.uid);
-      setDoc(userRef, { name: company.name }, { merge: true });
+        console.log(company)
+      const userRef = doc(db, "company");
+      setDoc(
+        userRef,
+        // { name: company.name, users: company.arr },
+        company,
+        // { merge: true }
+      );
     }
   }
 
@@ -28,12 +32,12 @@ const Ad_AddComp = () => {
       snapshot.docs.forEach((doc) => {
         user.push({ ...doc.data(), id: doc.id });
       });
-    //   <option>{user.email}</option>
-    // arr.push(user[1])
-    //   console.log(user);
-      const newArr = []
-      user.forEach((item, index) => newArr.push(item.email))
-      setArr(newArr)
+      //   <option>{user.email}</option>
+      // arr.push(user[1])
+      //   console.log(user);
+      const newArr = [];
+      user.forEach((item, index) => newArr.push(item.email));
+      setArr(newArr);
     })
     .catch((err) => {
       console.log(err.message);
@@ -43,7 +47,6 @@ const Ad_AddComp = () => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
-        fetchData(company);
       } else {
         setUserAuth(null);
       }
@@ -53,13 +56,9 @@ const Ad_AddComp = () => {
     };
   });
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(newUser);
-  };
-
   const addComp = (e) => {
     e.preventDefault();
-    addDoc();
+    fetchData();
     e.target.reset();
   };
 
@@ -78,8 +77,8 @@ const Ad_AddComp = () => {
             type="text"
             id="text"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
+            value={company.name}
+            onChange={(e) => setCompany(prevState => ({...prevState,['name'] : e.target.value}))}
             required
           />
         </div>
@@ -90,19 +89,30 @@ const Ad_AddComp = () => {
           >
             Add Access Users
           </label>
-          <select
-            id="type"
-            className="bg-gray-50 mb-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            {/* {getDocs(colRef)} */}
-            {
-                // console.log(arr)
-                arr.map((item, index) => {
-                    return <option key={index}>{item}</option>
-                })
-            }
-          </select>
 
+          {/* {getDocs(colRef)} */}
+          {
+            // console.log(arr)
+            arr.map((item, index) => {
+              return (
+                // <option key={index}>{item}</option>
+                <div key={index} className="flex items-center mb-4">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    value=""
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    for="default-checkbox"
+                    className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    {item}
+                  </label>
+                </div>
+              );
+            })
+          }
 
           {/* <label
             for="email"

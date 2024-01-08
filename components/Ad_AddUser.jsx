@@ -29,7 +29,7 @@ const Ad_AddUser = () => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
             setUserAuth(user);
-            fetchData(user)
+            // fetchData(user)
           } else {
             setUserAuth(null);
           }
@@ -49,6 +49,7 @@ const Ad_AddUser = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setNewUser(email)
+        fetchData(userCredential.user)
         addDoc()
         signOut(auth);
         signInWithEmailAndPassword(auth, userAuth.email, adminpass)

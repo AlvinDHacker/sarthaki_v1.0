@@ -39,7 +39,7 @@ const Ad_AddEmpl = () => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
             setUserAuth(user);
-            fetchData(user)
+            // fetchData(user)
           } else {
             setUserAuth(null);
           }
@@ -47,7 +47,7 @@ const Ad_AddEmpl = () => {
         return () => {
           listen();
         };
-      });
+      },[])
 
       const handleCopy = () => {
         navigator.clipboard.writeText(newUser);
@@ -59,6 +59,8 @@ const Ad_AddEmpl = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setNewUser(email)
+        // console.log(userCredential.user)
+        fetchData(userCredential.user)
         addDoc()
         signOut(auth);
         signInWithEmailAndPassword(auth, userAuth.email, adminpass)
@@ -116,7 +118,7 @@ const Ad_AddEmpl = () => {
             </label>
             <input
               type="password"
-              id="password"
+              id="admin_password"
               onChange={(e) => setAdminpass(e.target.value)}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
