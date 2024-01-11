@@ -1,6 +1,6 @@
 "use client";
 import { onAuthStateChanged } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { auth } from "../lib/firebase";
 import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
@@ -9,12 +9,13 @@ const Ad_AddComp = () => {
   const [company, setCompany] = useState({name:'', user: []});
 
   const [arr, setArr] = useState([]);
+  const [selEmail, setSelEmail] = useState([]);
   const [userAuth, setUserAuth] = useState(null);
 
   async function fetchData() {
     if (company) {
         console.log(company)
-      const userRef = doc(db, "company");
+      const userRef = doc(db, "company", company.uid);
       setDoc(
         userRef,
         // { name: company.name, users: company.arr },
@@ -26,24 +27,26 @@ const Ad_AddComp = () => {
 
   const colRef = collection(db, "users");
 
-  getDocs(colRef)
-    .then((snapshot) => {
-      let user = [];
-      snapshot.docs.forEach((doc) => {
-        user.push({ ...doc.data(), id: doc.id });
-      });
-      //   <option>{user.email}</option>
-      // arr.push(user[1])
-      //   console.log(user);
-      const newArr = [];
-      user.forEach((item, index) => newArr.push(item.email));
-      setArr(newArr);
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-
   useEffect(() => {
+    getDocs(colRef)
+      .then((snapshot) => {
+        let user = [];
+        snapshot.docs.forEach((doc) => {
+          user.push({ ...doc.data(), id: doc.id });
+        });
+        //   <option>{user.email}</option>
+        // arr.push(user[1])
+        //   console.log(user);
+        const newArr = [];
+        user.forEach((item, index) => newArr.push(item.email));
+        setArr(newArr);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  })
+
+  useLayoutEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserAuth(user);
@@ -100,7 +103,9 @@ const Ad_AddComp = () => {
                   <input
                     id="default-checkbox"
                     type="checkbox"
-                    value=""
+                    onChange={() => setSelEmail(prevSelEmail => [...prevSelEmail, item])}
+                    // onClick={setSelEmail.push(item)}
+                    value={item}
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   />
                   <label

@@ -1,6 +1,6 @@
 "use client";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { auth } from "../lib/firebase";
 import { setDoc, doc, addDoc } from "firebase/firestore";
 import { db } from "../lib/firebase";
@@ -25,7 +25,7 @@ const Ad_AddUser = () => {
       }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
             setUserAuth(user);

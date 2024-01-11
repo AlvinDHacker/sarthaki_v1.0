@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <div className="">
+      <footer className="bg-gray-100 w-[98%] fixed bottom-1 rounded-lg shadow dark:bg-gray-900 m-4">
         <div className="w-full max-w-screen-xl mx-auto p-2">
           <div className="sm:flex sm:items-center sm:justify-between my-1">
             <a href="#" className="flex items-center sm:mb-0">

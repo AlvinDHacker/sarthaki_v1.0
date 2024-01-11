@@ -1,5 +1,5 @@
 "use client";
-import { MenuIcon, X, PhoneCall, LogOut } from "lucide-react";
+import { MenuIcon, X, Phone, LogOut } from "lucide-react";
 import Image from "next/image";
 import VerticalNav from "./VerticalNav";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -58,7 +58,7 @@ const NavHead = (props) => {
               href="tel:9820257477"
               className="mr-6 text-sm  text-gray-500 dark:text-white hover:text-gray-900 dark:hover:text-gray-300"
             >
-              <PhoneCall className="w-6 h-6 text-blue-600 font-extrabold md:hidden" />
+              <Phone className="w-6 h-6 text-blue-600 font-extrabold md:hidden" />
               <span className="hidden md:block">Call Us</span>
             </a>
             {userAuth ? (
