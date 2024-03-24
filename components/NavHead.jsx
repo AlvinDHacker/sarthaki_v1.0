@@ -30,6 +30,7 @@ const NavHead = (props) => {
   }, []);
 
   const userSignout = () => {
+    sessionStorage.clear()
     signOut(auth)
       .then(() => {
         console.log("Signout Success");

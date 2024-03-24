@@ -32,6 +32,7 @@ const Authenticate = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        sessionStorage.setItem("userEmail",userName)
       })
       .catch((error) => {
         console.log(error);

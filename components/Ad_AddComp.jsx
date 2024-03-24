@@ -6,7 +6,7 @@ import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 const Ad_AddComp = () => {
-  const [company, setCompany] = useState({name:'', user: []});
+  const [company, setCompany] = useState({ name: "", user: [] });
 
   const [arr, setArr] = useState([]);
   const [selEmail, setSelEmail] = useState([]);
@@ -14,14 +14,27 @@ const Ad_AddComp = () => {
 
   async function fetchData() {
     if (company) {
-        console.log(company)
+      console.log(company);
       const userRef = doc(db, "company", company.uid);
       setDoc(
         userRef,
         // { name: company.name, users: company.arr },
-        company,
+        company
         // { merge: true }
       );
+    }
+    try {
+      const docRef = doc(db, "users", myId);
+      await setDoc(docRef, {
+        review: review,
+        reviewDesc: reviewDesc,
+        revStat: true,
+      }, { merge: true });
+
+      alert("Project Updated successfully");
+    } catch (e) {
+      alert("Project not Updated successfully");
+      console.log(e);
     }
   }
 
@@ -44,7 +57,7 @@ const Ad_AddComp = () => {
       .catch((err) => {
         console.log(err.message);
       });
-  })
+  }, []);
 
   useLayoutEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -81,7 +94,12 @@ const Ad_AddComp = () => {
             id="text"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={company.name}
-            onChange={(e) => setCompany(prevState => ({...prevState,['name'] : e.target.value}))}
+            onChange={(e) =>
+              setCompany((prevState) => ({
+                ...prevState,
+                ["name"]: e.target.value,
+              }))
+            }
             required
           />
         </div>
@@ -103,7 +121,9 @@ const Ad_AddComp = () => {
                   <input
                     id="default-checkbox"
                     type="checkbox"
-                    onChange={() => setSelEmail(prevSelEmail => [...prevSelEmail, item])}
+                    onChange={() =>
+                      setSelEmail((prevSelEmail) => [...prevSelEmail, item])
+                    }
                     // onClick={setSelEmail.push(item)}
                     value={item}
                     className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"

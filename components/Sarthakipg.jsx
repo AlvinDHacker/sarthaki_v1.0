@@ -1,8 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
+import { db } from "../lib/firebase";
 import SarthakiDash from "./SarthakiDash";
 
 const Sarthakipg = () => {
+  const colRef = collection(db, "company");
+  const [arr, setArr] = useState([]);
+
+  useEffect(() => {
+    getDocs(colRef)
+      .then((snapshot) => {
+        let company = [];
+        console.log(sessionStorage.getItem("userEmail"));
+        console.log(company.user[1])
+        snapshot.docs.forEach((doc) => {
+          company.push({ ...doc.data(), id: doc.id });
+        });
+        setArr(company);
+        console.log(company);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
 
   return (
     <div>
