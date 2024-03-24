@@ -1,0 +1,1062 @@
+[
+    {
+        "0": [
+            "999",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "1": [
+            "SN",
+            "Activity Area",
+            "Sub-Activity",
+            "Task List",
+            "Entity",
+            "Periodicity"
+        ]
+    },
+    {
+        "2": [
+            "1",
+            "ENTITY SET-UP",
+            "Registrations",
+            "PAN",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "3": [
+            "2",
+            "ENTITY SET-UP",
+            "Registrations",
+            "TAN",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "4": [
+            "3",
+            "ENTITY SET-UP",
+            "Registrations",
+            "HUF",
+            "HUF",
+            "As & When"
+        ]
+    },
+    {
+        "5": [
+            "4",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Partnership",
+            "Partnership",
+            "As & When"
+        ]
+    },
+    {
+        "6": [
+            "5",
+            "ENTITY SET-UP",
+            "Registrations",
+            "LLP",
+            "LLP",
+            "As & When"
+        ]
+    },
+    {
+        "7": [
+            "6",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Pvt. Ltd. Co.",
+            "Corporate",
+            "As & When"
+        ]
+    },
+    {
+        "8": [
+            "7",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Trust | Charity Commissioner",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "9": [
+            "8",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Trust | Registrar of Societies",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "10": [
+            "9",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Trust | Companies Act",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "11": [
+            "10",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Trust | 12A",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "12": [
+            "11",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Trust | 80G",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "13": [
+            "12",
+            "ENTITY SET-UP",
+            "Registrations",
+            "FCRA",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "14": [
+            "13",
+            "ENTITY SET-UP",
+            "Registrations",
+            "GST",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "15": [
+            "14",
+            "ENTITY SET-UP",
+            "Registrations",
+            "PT",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "16": [
+            "15",
+            "ENTITY SET-UP",
+            "Registrations",
+            "PF",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "17": [
+            "16",
+            "ENTITY SET-UP",
+            "Registrations",
+            "ESIC",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "18": [
+            "17",
+            "ENTITY SET-UP",
+            "Registrations",
+            "Gumastha (Shop & Establishment)",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "19": [
+            "18",
+            "ENTITY SET-UP",
+            "Registrations",
+            "MLWF",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "20": [
+            "19",
+            "ENTITY SET-UP",
+            "Registrations",
+            "RERA",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "21": [
+            "21",
+            "Accounting",
+            "F&A Routine",
+            "CPV",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "22": [
+            "22",
+            "Accounting",
+            "F&A Routine",
+            "BPV",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "23": [
+            "23",
+            "Accounting",
+            "F&A Routine",
+            "CRV",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "24": [
+            "24",
+            "Accounting",
+            "F&A Routine",
+            "BRV",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "25": [
+            "25",
+            "Accounting",
+            "F&A Routine",
+            "PV/DN/CN",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "26": [
+            "26",
+            "Accounting",
+            "F&A Routine",
+            "SV/DN/CN",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "27": [
+            "27",
+            "Accounting",
+            "F&A Routine",
+            "JV",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "28": [
+            "28",
+            "Accounting",
+            "F&A Routine",
+            "Cheque/ NEFT/ RTGS/ etc. preparation",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "29": [
+            "29",
+            "Accounting",
+            "F&A Routine",
+            "Cheque Deposit",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "30": [
+            "30",
+            "Accounting",
+            "F&A Routine",
+            "Sales Invoice Preparation",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "31": [
+            "31",
+            "Accounting",
+            "Payroll Routine",
+            "Salary Processing",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "32": [
+            "32",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "Bank",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "33": [
+            "33",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "Vendor",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "34": [
+            "34",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "GR/IR",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "35": [
+            "35",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "Customer",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "36": [
+            "36",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "Inter-Company/ Branch",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "37": [
+            "37",
+            "Accounting",
+            "F&A Review & Reconciliation(s)",
+            "Ledger Scrutiny",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "38": [
+            "38",
+            "Accounting",
+            "F&A Physical Verification & Reconciliation(s)",
+            "Cash/Petty Cash",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "39": [
+            "39",
+            "Accounting",
+            "F&A Physical Verification & Reconciliation(s)",
+            "Inventory",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "40": [
+            "40",
+            "Accounting",
+            "F&A Physical Verification & Reconciliation(s)",
+            "Fixed Assets",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "41": [
+            "44",
+            "COMPLIANCE",
+            "TDS Salary",
+            "Investment Declaration",
+            "ALL",
+            "Quarterly"
+        ]
+    },
+    {
+        "42": [
+            "45",
+            "COMPLIANCE",
+            "TDS Salary",
+            "Computation & Payment",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "43": [
+            "46",
+            "COMPLIANCE",
+            "TDS Salary",
+            "Return filing",
+            "ALL",
+            "Quarterly"
+        ]
+    },
+    {
+        "44": [
+            "47",
+            "COMPLIANCE",
+            "TDS Salary",
+            "Return filing & Form 16",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "45": [
+            "48",
+            "COMPLIANCE",
+            "TDS Non-Salary",
+            "Computation & Payment",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "46": [
+            "49",
+            "COMPLIANCE",
+            "TDS Non-Salary",
+            "Return filing & Form 16A",
+            "ALL",
+            "Quarterly"
+        ]
+    },
+    {
+        "47": [
+            "50",
+            "COMPLIANCE",
+            "GST Routine",
+            "E-way bill/E-invoicing",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "48": [
+            "51",
+            "COMPLIANCE",
+            "GST Routine",
+            "GSTR1 Output",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "49": [
+            "52",
+            "COMPLIANCE",
+            "GST Routine",
+            "Input & GSTR2A/2B Recon",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "50": [
+            "53",
+            "COMPLIANCE",
+            "GST Routine",
+            "GSTR3B Liability",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "51": [
+            "54",
+            "COMPLIANCE",
+            "GST Routine",
+            "GSTR6 ISD",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "52": [
+            "55",
+            "COMPLIANCE",
+            "GST Routine",
+            "CMP08 Composite",
+            "ALL",
+            "Quarterly"
+        ]
+    },
+    {
+        "53": [
+            "56",
+            "COMPLIANCE",
+            "GST Annual Return",
+            "GST Ledger(s) v/s GSTN",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "54": [
+            "57",
+            "COMPLIANCE",
+            "GST Annual Return",
+            "Trial Balance v/s GSTN",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "55": [
+            "58",
+            "COMPLIANCE",
+            "GST Annual Return",
+            "GSTR9 Annual",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "56": [
+            "59",
+            "COMPLIANCE",
+            "PF",
+            "Computation & Payment",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "57": [
+            "60",
+            "COMPLIANCE",
+            "PF",
+            "Return filing",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "58": [
+            "61",
+            "COMPLIANCE",
+            "PF",
+            "Annual Return filing",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "59": [
+            "62",
+            "COMPLIANCE",
+            "ESIC",
+            "Computation & Payment",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "60": [
+            "63",
+            "COMPLIANCE",
+            "PT",
+            "Computation & Payment",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "61": [
+            "64",
+            "COMPLIANCE",
+            "MLWF",
+            "Computation & Payment",
+            "ALL",
+            "Half-yearly"
+        ]
+    },
+    {
+        "62": [
+            "65",
+            "COMPLIANCE",
+            "Trust Routine",
+            "Change Report | Modifications of object clause, Trustees, etc.",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "63": [
+            "66",
+            "COMPLIANCE",
+            "Trust Routine",
+            "Sec.80G | Donor Receipt/Certificate",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "64": [
+            "67",
+            "COMPLIANCE",
+            "Trust Routine",
+            "Sec.80G | Donation Return Statement",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "65": [
+            "68",
+            "COMPLIANCE",
+            "Trust Routine",
+            "FCRA | Intimation of opening of  Utilization Bank Account(s)",
+            "Trust",
+            "Quarterly"
+        ]
+    },
+    {
+        "66": [
+            "69",
+            "COMPLIANCE",
+            "Trust Routine",
+            "FCRA | Intimation of Quarterly receipt of foreign contribution",
+            "Trust",
+            "Quarterly"
+        ]
+    },
+    {
+        "67": [
+            "70",
+            "COMPLIANCE",
+            "Trust Routine",
+            "FCRA | Form 6 Change in details of association",
+            "Trust",
+            "As & When"
+        ]
+    },
+    {
+        "68": [
+            "71",
+            "COMPLIANCE",
+            "Trust Routine",
+            "FCRA | Form FC- 4 Annual Return",
+            "Trust",
+            "Yearly"
+        ]
+    },
+    {
+        "69": [
+            "72",
+            "COMPLIANCE",
+            "ROC Routine",
+            "Meeting Notice & Minutes Book Updation",
+            "Corporate",
+            "Quarterly"
+        ]
+    },
+    {
+        "70": [
+            "73",
+            "COMPLIANCE",
+            "ROC Routine",
+            "ROC Filing Review (Forms, Dir, Charge, etc.)",
+            "Corporate",
+            "As & When"
+        ]
+    },
+    {
+        "71": [
+            "74",
+            "COMPLIANCE",
+            "ROC Routine",
+            "Director KYC",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "72": [
+            "75",
+            "COMPLIANCE",
+            "ROC Routine",
+            "Director DSC active status",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "73": [
+            "76",
+            "COMPLIANCE",
+            "ROC Routine",
+            "MSME",
+            "Corporate",
+            "Half-yearly"
+        ]
+    },
+    {
+        "74": [
+            "77",
+            "COMPLIANCE",
+            "ROC Routine",
+            "ADT-1",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "75": [
+            "78",
+            "COMPLIANCE",
+            "ROC Routine",
+            "AOC-4 etc.",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "76": [
+            "79",
+            "COMPLIANCE",
+            "ROC Routine",
+            "MGT-7",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "77": [
+            "80",
+            "COMPLIANCE",
+            "ROC Routine",
+            "CRA-4",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "78": [
+            "81",
+            "COMPLIANCE",
+            "ROC Routine",
+            "MGT-14",
+            "Corporate",
+            "Yearly"
+        ]
+    },
+    {
+        "79": [
+            "82",
+            "COMPLIANCE",
+            "ROC Routine",
+            "Form 11 (LLP)",
+            "LLP",
+            "Yearly"
+        ]
+    },
+    {
+        "80": [
+            "83",
+            "COMPLIANCE",
+            "ROC Routine",
+            "Form 8 (LLP)",
+            "LLP",
+            "Yearly"
+        ]
+    },
+    {
+        "81": [
+            "84",
+            "COMPLIANCE",
+            "RBI ODI",
+            "Form ODI - Part I | On Making Investment",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "82": [
+            "85",
+            "COMPLIANCE",
+            "RBI ODI",
+            "Receive Share Certificates/Other Documentary Evidence",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "83": [
+            "86",
+            "COMPLIANCE",
+            "RBI ODI",
+            "Form ODI - Part III | Divestment Report",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "84": [
+            "87",
+            "COMPLIANCE",
+            "RBI ODI",
+            "Return on Foreign Liabilities and Assets",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "85": [
+            "88",
+            "COMPLIANCE",
+            "RBI ODI",
+            "Form ODI - Part II | Annual Performance Report",
+            "ALL",
+            "Yearly"
+        ]
+    },
+    {
+        "86": [
+            "89",
+            "COMPLIANCE",
+            "RBI FDI",
+            "FCGPR (Foreign Currency-Gross Provisional Return) Form",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "87": [
+            "90",
+            "COMPLIANCE",
+            "RBI FDI",
+            "FCTRS (Form Foreign Currency-Transfer of Shares) Form",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "88": [
+            "91",
+            "COMPLIANCE",
+            "RBI FDI",
+            "LLP(I) Form | LLP",
+            "LLP",
+            "As & When"
+        ]
+    },
+    {
+        "89": [
+            "92",
+            "COMPLIANCE",
+            "RBI FDI",
+            "LLP(II) Form | LLP",
+            "LLP",
+            "As & When"
+        ]
+    },
+    {
+        "90": [
+            "93",
+            "COMPLIANCE",
+            "RBI FDI",
+            "CN Form | Startups",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "91": [
+            "95",
+            "COMPLIANCE",
+            "RBI FDI",
+            "ESOP Form | ESOP to persons resident outside India",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "92": [
+            "96",
+            "COMPLIANCE",
+            "RBI FDI",
+            "DI Form | Downstream investment",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "93": [
+            "97",
+            "COMPLIANCE",
+            "RBI FDI",
+            "INVI Form | Investment Vehicle",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "94": [
+            "98",
+            "COMPLIANCE",
+            "RBI FDI",
+            "ESOP Form | ESOP to persons resident outside India",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "95": [
+            "99",
+            "COMPLIANCE",
+            "Assessments",
+            "Income Tax",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "96": [
+            "100",
+            "COMPLIANCE",
+            "Assessments",
+            "Service Tax",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "97": [
+            "100",
+            "COMPLIANCE",
+            "Assessments",
+            "VAT",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "98": [
+            "101",
+            "COMPLIANCE",
+            "Assessments",
+            "GST",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "99": [
+            "102",
+            "COMPLIANCE",
+            "Certifications",
+            "Preparation of form 15CA/CB",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "100": [
+            "103",
+            "COMPLIANCE",
+            "Certifications",
+            "Others",
+            "ALL",
+            "As & When"
+        ]
+    },
+    {
+        "101": [
+            "105",
+            "MIS",
+            "",
+            "Accounts Review",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "102": [
+            "106",
+            "MIS",
+            "",
+            "Statutory Compliance Review",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "103": [
+            "107",
+            "MIS",
+            "",
+            "Cash Flow",
+            "ALL",
+            "Weekly"
+        ]
+    },
+    {
+        "104": [
+            "108",
+            "MIS",
+            "",
+            "Financial Analysis",
+            "ALL",
+            "Monthly"
+        ]
+    },
+    {
+        "105": [
+            "109",
+            "MIS",
+            "",
+            "Bank MIS",
+            "ALL",
+            "Monthly"
+        ]
+    }
+]
