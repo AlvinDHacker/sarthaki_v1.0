@@ -13,7 +13,7 @@ const Sarthakipg = () => {
       .then((snapshot) => {
         let company = [];
         console.log(sessionStorage.getItem("userEmail"));
-        console.log(company.user[1])
+        console.log(company.user)
         snapshot.docs.forEach((doc) => {
           company.push({ ...doc.data(), id: doc.id });
         });

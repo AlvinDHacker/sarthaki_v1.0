@@ -4,13 +4,13 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="">
-      <footer className="bg-gray-100 w-[98%] fixed bottom-1 rounded-lg shadow dark:bg-gray-900 m-4">
+      <footer className="bg-gray-100 w-[98%] bottom-1 rounded-lg shadow dark:bg-gray-900 m-4">
         <div className="w-full max-w-screen-xl mx-auto p-2">
           <div className="sm:flex sm:items-center sm:justify-between my-1">
             <a href="#" className="flex items-center sm:mb-0">
               <Image
-                src="/img/download.png"
-                className="mr-3"
+                src="/user.jpg"
+                className="mr-3 rounded-full"
                 alt="Sarthaki Logo"
                 height={20}
                 width={20}

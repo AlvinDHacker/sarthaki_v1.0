@@ -34,6 +34,7 @@ const NavHead = (props) => {
     signOut(auth)
       .then(() => {
         console.log("Signout Success");
+        sessionStorage.clear()
       })
       .catch((e) => console.log(e));
   };
@@ -44,8 +45,8 @@ const NavHead = (props) => {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a href="#" className="flex items-center">
             <Image
-              src="/img/download.png"
-              className="mr-3"
+              src="/user.jpg"
+              className="mr-3 rounded-full"
               alt="Sarthaki Logo"
               width={30}
               height={30}

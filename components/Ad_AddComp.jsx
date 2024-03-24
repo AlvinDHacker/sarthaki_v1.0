@@ -12,32 +12,6 @@ const Ad_AddComp = () => {
   const [selEmail, setSelEmail] = useState([]);
   const [userAuth, setUserAuth] = useState(null);
 
-  async function fetchData() {
-    if (company) {
-      console.log(company);
-      const userRef = doc(db, "company", company.uid);
-      setDoc(
-        userRef,
-        // { name: company.name, users: company.arr },
-        company
-        // { merge: true }
-      );
-    }
-    try {
-      const docRef = doc(db, "users", myId);
-      await setDoc(docRef, {
-        review: review,
-        reviewDesc: reviewDesc,
-        revStat: true,
-      }, { merge: true });
-
-      alert("Project Updated successfully");
-    } catch (e) {
-      alert("Project not Updated successfully");
-      console.log(e);
-    }
-  }
-
   const colRef = collection(db, "users");
 
   useEffect(() => {
@@ -74,6 +48,31 @@ const Ad_AddComp = () => {
 
   const addComp = (e) => {
     e.preventDefault();
+    async function fetchData() {
+      if (company) {
+        console.log(company);
+        const userRef = doc(db, "company", company.uid);
+        setDoc(
+          userRef,
+          // { name: company.name, users: company.arr },
+          company
+          // { merge: true }
+        );
+      }
+      try {
+        const docRef = doc(db, "users", myId);
+        await setDoc(docRef, {
+          review: review,
+          reviewDesc: reviewDesc,
+          revStat: true,
+        }, { merge: true });
+  
+        alert("Project Updated successfully");
+      } catch (e) {
+        alert("Project not Updated successfully");
+        console.log(e);
+      }
+    }
     fetchData();
     e.target.reset();
   };
