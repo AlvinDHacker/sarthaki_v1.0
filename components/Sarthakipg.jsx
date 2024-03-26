@@ -12,7 +12,7 @@ const Sarthakipg = () => {
     getDocs(colRef)
       .then((snapshot) => {
         let company = [];
-        console.log(sessionStorage.getItem("userEmail"));
+        
         console.log(company.user)
         snapshot.docs.forEach((doc) => {
           company.push({ ...doc.data(), id: doc.id });
@@ -23,6 +23,8 @@ const Sarthakipg = () => {
       .catch((err) => {
         console.log(err.message);
       });
+      console.log(sessionStorage.getItem("userEmail"));
+      console.log('hi pg')
   }, []);
 
   return (

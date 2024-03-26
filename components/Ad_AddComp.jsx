@@ -1,8 +1,9 @@
 "use client";
 import { onAuthStateChanged } from "firebase/auth";
+import { v4 as uuidv4 } from 'uuid';
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { auth } from "../lib/firebase";
-import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
+import { setDoc, doc, collection, getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 const Ad_AddComp = () => {
@@ -49,17 +50,17 @@ const Ad_AddComp = () => {
   const addComp = (e) => {
     e.preventDefault();
     async function fetchData() {
-      if (company) {
-        console.log(company);
-        const userRef = doc(db, "company", company.uid);
-        setDoc(
-          userRef,
-          // { name: company.name, users: company.arr },
-          company
-          // { merge: true }
-        );
-      }
       try {
+        if (company) {
+          const docId = uuidv4()
+          console.log(company);
+          const userRef = doc(db, "company", docId );
+          setDoc(
+            userRef,
+            company
+          );
+        }
+
         const docRef = doc(db, "users", myId);
         await setDoc(docRef, {
           review: review,
@@ -79,6 +80,7 @@ const Ad_AddComp = () => {
 
   return (
     <div className="md:w-[60%] w-[90%] mx-auto py-5">
+      {console.log(company)}
       <h1 className="font-bold text-xl mb-5 ">Create Company</h1>
       <form onSubmit={addComp}>
         <div className="mb-4">
@@ -121,7 +123,10 @@ const Ad_AddComp = () => {
                     id="default-checkbox"
                     type="checkbox"
                     onChange={() =>
-                      setSelEmail((prevSelEmail) => [...prevSelEmail, item])
+                      setCompany(prevCompany => ({
+                        ...prevCompany,
+                        user: [{item}] // New value for `user`
+                      }))
                     }
                     // onClick={setSelEmail.push(item)}
                     value={item}

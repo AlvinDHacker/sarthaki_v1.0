@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import { setDoc, doc, addDoc, collection, getDocs } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { db } from "../lib/firebase";
 
 const RequestsSrDash = (props) => {
@@ -29,6 +29,7 @@ const RequestsSrDash = (props) => {
       console.log(e);
     }
     e.target.reset();
+    console.log("Request")
   };
 
   return (
